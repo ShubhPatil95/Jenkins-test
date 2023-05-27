@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Git Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/Pramod6395/Jenkins-Docker.git'
+                git branch: 'main', url: 'https://github.com/ShubhPatil95/Jenkins-test.git'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_id') {
-                        docker.image("pramopatil95/python-flask-app:${env.BUILD_NUMBER}").push()
+                        docker.image("shubhpatil95/python-flask-app:${env.BUILD_NUMBER}").push()
                     }
                 }
             }
