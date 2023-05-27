@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("pramopatil95/python-flask-app:${env.BUILD_NUMBER}")
+                    docker.build("shubhpatil95/python-flask-app:${env.BUILD_NUMBER}")
                 }
             }
         }
